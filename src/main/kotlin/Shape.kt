@@ -1,6 +1,6 @@
 package org.example
 
-interface Shapes {
+interface Shape {
     fun getPoints(): List<Point>
     fun area(): Double
     fun move(xDelta: Double, yDelta: Double)

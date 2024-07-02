@@ -1,10 +1,10 @@
 package org.example
 
-class Rectangle(
-    val x: Double,
-    val y: Double,
-    val width: Double,
-    val height: Double
+open class Rectangle(
+    private val x: Double,
+    private val y: Double,
+    private val width: Double,
+    private val height: Double
 ) : Shape {
 
     private val topLeftCornerPoint: Point = Point(x, y)

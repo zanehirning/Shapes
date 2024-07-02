@@ -1,8 +1,8 @@
 package org.example
 
 class Point(
-    private var x: Double,
-    private var y: Double
+    var x: Double,
+    var y: Double
 ){
     fun getX(): Double {
         return this.x

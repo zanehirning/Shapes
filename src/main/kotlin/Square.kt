@@ -1,10 +1,10 @@
 package org.example
 
 class Square(
-    private val x: Double,
-    private val y: Double,
-    private val width: Double,
-    private val height: Double
+    x: Double,
+    y: Double,
+    width: Double,
+    height: Double
 ) : Shape, Rectangle(
     x,
     y,

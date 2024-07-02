@@ -1,9 +1,9 @@
 package org.example
 
 class Circle(
-    private var center: Point,
-    private var radiusX: Double,
-    private var radiusY: Double
+    center: Point,
+    radiusX: Double,
+    radiusY: Double
 ) : Shape, Ellipse(
     center,
     radiusX,

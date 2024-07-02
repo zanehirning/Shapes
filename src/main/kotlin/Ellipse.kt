@@ -1,9 +1,9 @@
 package org.example
 
 open class Ellipse(
-    private var center: Point,
-    private var radiusX: Double,
-    private var radiusY: Double
+    var center: Point,
+    var radiusX: Double,
+    var radiusY: Double
 ) : Shape {
 
     init {

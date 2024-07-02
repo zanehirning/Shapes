@@ -1,8 +1,8 @@
 package org.example
 
 class Line(
-    private var startPoint: Point,
-    private var endPoint: Point
+    var startPoint: Point,
+    var endPoint: Point
 ) {
 
     init {

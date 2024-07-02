@@ -1,6 +1,6 @@
 package org.example
 
-class Ellipse(
+open class Ellipse(
     private var center: Point,
     private var radiusX: Double,
     private var radiusY: Double

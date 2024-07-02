@@ -2,10 +2,15 @@ package org.example
 
 class Circle(
     center: Point,
-    radiusX: Double,
-    radiusY: Double
+    radius: Double
 ) : Shape, Ellipse(
     center,
-    radiusX,
-    radiusY
-)
+    radius,
+    radius
+) {
+    init {
+        if (this.radiusX != this.radiusY) {
+            throw IllegalArgumentException("Radii must be equal")
+        }
+    }
+}

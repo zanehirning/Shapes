@@ -17,6 +17,12 @@ class Line(
     }
 
     fun slope(): Double {
+        if (endPoint.x - startPoint.x == 0.0) {
+            throw ArithmeticException()
+        }
+        if (endPoint.y - startPoint.y == 0.0) {
+            return 0.0
+        }
         return (endPoint.y - startPoint.y) / (endPoint.x - startPoint.x)
     }
 

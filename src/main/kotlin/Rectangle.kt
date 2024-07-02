@@ -7,8 +7,8 @@ open class Rectangle(
     val height: Double
 ) : Shape {
 
-    private val topLeftCornerPoint: Point = Point(x, y)
-    private val bottomRightCornerPoint: Point = Point(x + width, y + height)
+    val topLeftCornerPoint: Point = Point(x, y)
+    val bottomRightCornerPoint: Point = Point(x + width, y + height)
 
     init {
         if (width <= 0 || height <= 0) {
@@ -20,8 +20,8 @@ open class Rectangle(
         return listOf(
             topLeftCornerPoint.clone(),
             Point(x + width, y),
-            bottomRightCornerPoint.clone(),
-            Point(x, y + height)
+            Point(x, y + height),
+            bottomRightCornerPoint.clone()
         )
     }
 

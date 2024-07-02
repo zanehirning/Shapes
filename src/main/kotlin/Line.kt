@@ -6,17 +6,9 @@ class Line(
 ) {
 
     init {
-        if (startPoint.getX() == endPoint.getX() && startPoint.getY() == endPoint.getY()) {
+        if (startPoint.x == endPoint.x && startPoint.y == endPoint.y) {
             throw IllegalArgumentException("Start and end points must be different")
         }
-    }
-
-    fun getStartPoint(): Point {
-        return this.startPoint.clone()
-    }
-
-    fun getEndPoint(): Point {
-        return this.endPoint.clone()
     }
 
     fun move(xDelta: Double, yDelta: Double) {
@@ -25,10 +17,10 @@ class Line(
     }
 
     fun slope(): Double {
-        return (endPoint.getY() - startPoint.getY()) / (endPoint.getX() - startPoint.getX())
+        return (endPoint.y - startPoint.y) / (endPoint.x - startPoint.x)
     }
 
     fun length(): Double {
-        return Math.sqrt(Math.pow(endPoint.getX() - startPoint.getX(), 2.0) + Math.pow(endPoint.getY() - startPoint.getY(), 2.0))
+        return Math.sqrt(Math.pow(endPoint.x - startPoint.x, 2.0) + Math.pow(endPoint.y - startPoint.y, 2.0))
     }
 }

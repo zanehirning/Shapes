@@ -10,11 +10,17 @@ class Rectangle(
     private val topLeftCornerPoint: Point = Point(x, y)
     private val bottomRightCornerPoint: Point = Point(x + width, y + height)
 
+    init {
+        if (width <= 0 || height <= 0) {
+            throw IllegalArgumentException("Width and height must be positive")
+        }
+    }
+
     override fun getPoints(): List<Point> {
         return listOf(
-            topLeftCornerPoint,
+            topLeftCornerPoint.clone(),
             Point(x + width, y),
-            bottomRightCornerPoint,
+            bottomRightCornerPoint.clone(),
             Point(x, y + height)
         )
     }

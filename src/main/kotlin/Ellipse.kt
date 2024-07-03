@@ -1,11 +1,10 @@
 package org.example
 
 open class Ellipse(
-    var center: Point,
-    var radiusX: Double,
-    var radiusY: Double
+    val center: Point,
+    val radiusX: Double,
+    val radiusY: Double
 ) : Shape {
-
     init {
         if (radiusX <= 0 || radiusY <= 0) {
             throw IllegalArgumentException("Radii must be positive")
